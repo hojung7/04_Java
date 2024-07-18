@@ -112,7 +112,7 @@ public class VariableEx3 {
 		
 		final int NATIONAL_CODE = 82;
 		
-		NATIONAL_CODE = 11; // 오류 발생 (값 대입 불가)
+		//NATIONAL_CODE = 11; // 오류 발생 (값 대입 불가)
 		 
 		 
 		 
