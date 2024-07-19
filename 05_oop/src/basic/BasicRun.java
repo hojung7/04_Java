@@ -26,6 +26,7 @@ public class BasicRun {
 		n2.name = "신짱구";
 		n2.age = 5;
 		n2.gender = '남';
+		
 	//	n2.tel = 
 		
 		// 세금 납부 여부 확인
