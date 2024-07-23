@@ -189,9 +189,9 @@ public class StudentService {
 		System.out.println("[Html 공부하기]");
 		
 		int before = std.getHtml();
-		System.out.println("현재 Html 점수는 " + std.getHtml());
+		System.out.println("현재 Html 점수는 :  " + std.getHtml());
 		
-		System.out.println("증가 또는 감소한 Html 역량 점수 입력 : ");
+		System.out.print("증가 또는 감소한 Html 역량 점수 입력 : ");
 		int score =sc.nextInt();
 		
 		int temp = std.getHtml() + score;
@@ -209,12 +209,6 @@ public class StudentService {
 		String str = (score <= 0) ? (score + "" ) : ("+" + score) ;
 		
 		System.out.printf("%d -> %d (%s) \n", before, std.getHtml(), str);
-		
-		
-		
-		
-		
-		
 		
 	}
 	

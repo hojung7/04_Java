@@ -35,7 +35,7 @@ public class Student {
 	/* 메서드( == 멤버 메서드)*/
 	// getter / setter
 	
-	/* 반환형 */
+	/* 반환형 : 메서드 호출 시 반환되는 값의 자료형*/
 	public String getName() {
 		return name;
 	}
@@ -46,7 +46,8 @@ public class Student {
 		this.name = name;
 		
 		//this 참조 변수 : 생성된 객체 자체를 참조하는 변수(이 객체!)
-		// 반환형 void : retrurn 옆에 반환할 값이 없다
+		
+		// 반환형 void : return 옆에 반환할 값이 없다
 		// return; //-> 미작성 시 컴파일러가 자동 추가
 		
 		// getter / setter 자동 완성 : alt + shift + s -> r
@@ -97,7 +98,4 @@ public class Student {
 		return String.format("%s / %s / %c / java : %d / html : %d",
 				studentNumber, name, gender, java, html);
 	}
-
-	
-	
 }
