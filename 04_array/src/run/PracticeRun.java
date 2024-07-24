@@ -16,6 +16,6 @@ public class PracticeRun {
 //		pr.practice4();
 	//	pr.practice5();
 		// pr.practice6();
-		pr.practice();
+	
 	}
 }
