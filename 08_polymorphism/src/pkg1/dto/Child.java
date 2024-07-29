@@ -6,7 +6,7 @@ public class Child extends Parent {
 	private String car;
 	
 	public Child() {
-	super();
+	super(); // 안쓰면 컴파이러가 추가해줌 !!
 }
 
 	
