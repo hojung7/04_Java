@@ -93,7 +93,7 @@ public interface Calculator {
 	 * @param r
 	 * @return 원의 넓이
 	 */
-	double arrOfCercle(double r);
+	double areaOfCircle(double r);
 	
 	/**
 	 * 전달 받은 점수를 2진수 String으로 변환하여 반환
@@ -111,5 +111,7 @@ public interface Calculator {
 	 */
 	String toHexadecimal(int num);
 
-	double arrOfCircle(double r);
+	
+
+	
 }

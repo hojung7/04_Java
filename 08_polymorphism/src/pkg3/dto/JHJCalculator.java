@@ -7,62 +7,88 @@ public class JHJCalculator implements Calculator{
 	@Override
 	public int plus(int a, int b) {
 		int result = a + b;
+		
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
+		
 		return result;
 	}
 
 	@Override
 	public int minus(int a, int b) {
-		return a - b;
-	}
-
-	@Override
-	public int multi(int a, int b) {
-		return a * b;
-	}
-
-	@Override
-	public int div(int a, int b) {
-		return a / b;
-	}
-
-	@Override
-	public int mod(int a, int b) {
-		return a % b;
-	}
-
-	
-	
-	@Override
-	public int pow(int a, int x) {
-		// 거듭 제곱
+		int result = a - b;
 		
-		int result = 1;
-		for(int i=0 ; i<x ; i++) {
-			result *= a;
-		}
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
 		
 		return result;
 	}
 
 	@Override
-	public double arrOfCircle(double r) {
-		return Calculator.PI * r * r;
+	public int multi(int a, int b) {
+		int result = a * b;
+		
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
+		
+		return result;
+	}
+
+	@Override
+	public int div(int a, int b) {
+		int result = a / b;
+		
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
+		
+		return result;
+	}
+
+	@Override
+	public int mod(int a, int b) {
+		int result = a % b;
+		
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
+		
+		return result;
+	}
+
+	@Override
+	public int pow(int a, int x) {
+		int result = (int) Math.pow(a, x);
+		
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
+		
+		return result;
+	}
+
+	@Override
+	public double areaOfCircle(double r) {
+		double result = PI * r * r;
+		
+		if (result > MAX_NUM) return MAX_NUM;
+		if (result < MIN_NUM) return MIN_NUM;
+		
+		return result;
 	}
 
 	@Override
 	public String toBinary(int num) {
-		return "이진수겠지 뭐,...";
+
+		if (num > MAX_NUM) Integer.toBinaryString(MAX_NUM);
+		if (num < MIN_NUM) Integer.toBinaryString(MIN_NUM);
+		return Integer.toBinaryString(num);
 	}
 
 	@Override
 	public String toHexadecimal(int num) {
-		return "16진수 어쩌구겠지";
+		if (num > MAX_NUM) Integer.toHexString(MAX_NUM);
+		if (num < MIN_NUM) Integer.toHexString(MIN_NUM);
+		return Integer.toHexString(num);
 	}
 
-	@Override
-	public double arrOfCercle(double r) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
+
+
 }
