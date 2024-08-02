@@ -96,6 +96,7 @@ public class MemberDaoImpl implements MemberDao {
 		oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
 		
 		oos.writeObject(memberList);
+		
 		}finally {
 			if(oos != null) oos.close();  // flush() + 메모리 반환
 			
