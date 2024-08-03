@@ -34,7 +34,8 @@ public class Child1 extends Parent{
 	public Child1() {
 		super();
 		System.out.println("자식1 - 기본 생성자로 객체 생성");
-	}
+	} 
+	
 	
 	// 매개 변수 생성자
 	public Child1(String notebook) {
@@ -73,7 +74,7 @@ public class Child1 extends Parent{
 		System.out.println("notebook : " + notebook);
 		
 	}
-	
+	 
 	/* super 참조 변수
 	 * -  자식 객체 내부의 부모 객체를 참조하는 변수
 	 * 

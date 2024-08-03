@@ -175,7 +175,7 @@ public class PolyService {
 	
 				 System.out.println( ((Child)obj).toString());
 			 }
-			 
+			  
 			 else if (obj instanceof Parent) {
 				 System.out.println( ((Parent)obj).toString());
 			 }

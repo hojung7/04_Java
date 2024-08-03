@@ -36,7 +36,7 @@ public class ConditionEx {
 	 */
 		public void method2() {
 	
-		System.out.println("나이 입력 : ");
+		System.out.print("나이 입력 : ");
 	    int age = sc.nextInt(); // 필드 sc 이용
 	
 	    String result;
@@ -89,7 +89,7 @@ public class ConditionEx {
 			System.out.println("4. method4() - 계절 찾기");
 			System.out.println("5. method5() - 성적 판별기 ");
 			
-			System.out.println("번호 선택 >> ");
+			System.out.print("번호 선택 >> ");
 			int num = sc.nextInt();
 			System.out.println("--------------------------------------------------------------------");
 			
@@ -112,7 +112,7 @@ public class ConditionEx {
 		 * 입력된 달(월)의 계절 출력하기
 		 */
 		public void method4() {
-			System.out.println("달(월) 입력 : ");
+			System.out.print("달(월) 입력 : ");
 			int month = sc.nextInt();
 			
 			String result;
@@ -183,7 +183,7 @@ public class ConditionEx {
 			double sum = (midTerm * 0.4) + (finalTerm * 0.5) + (report * 0.1);
 			
 			String result;
-			System.out.println("최종점수 : " + sum);
+		
 			if (sum >= 95) { result = "A+";	
 			}else if (sum >= 90) {result = "A";
 			}else if (sum>=85) {result = "B+";
@@ -197,7 +197,7 @@ public class ConditionEx {
 			System.out.println(); // 줄바꿈
 			System.out.println(name + "의 최종점수 :" + sum + "점");
 		    
-			System.out.println(" 성적: " + result);
+			System.out.println("성적: " + result);
 		   
 			}
 

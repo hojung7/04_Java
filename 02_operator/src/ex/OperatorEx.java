@@ -40,7 +40,7 @@ public void method1() {
 	int num1 = sc.nextInt(); // 입력 버퍼에 있는 다음 정수 읽어오기
 									  // -? 정수만 읽어오기 [엔터]는 남음!!
 	
-	System.out.println("정수 입력 2 : ");
+	System.out.print("정수 입력 2 : ");
 	int num2 = sc.nextInt();
 	
 	System.out.println(); // 줄바꿈
@@ -64,7 +64,7 @@ public void method1() {
 	public void method2() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("정수 입력 : ");
+		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
 		
 		// input이 3의 배수가 맞으면 true, 아니면 false 저장

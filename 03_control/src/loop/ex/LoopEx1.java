@@ -48,7 +48,7 @@ public class LoopEx1 {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
-		if(b < a ) {
+		if(b > a ) {
 			for(int i = a ; i < b ; i++) {
 			System.out.println(i);
 			}
@@ -132,7 +132,7 @@ public class LoopEx1 {
 	 * "잘못 입력 하셨습니다" 출력
 	 */
 	public void method6() {
-		System.out.println("단 입력(2~8) : ");
+		System.out.print("단 입력(2~8) : ");
 		int dan = sc.nextInt();
 		
 		if(dan < 2 || dan >9) {
@@ -180,7 +180,7 @@ public class LoopEx1 {
 		
 		while(true) { //무한 반복
 			
-			System.out.println("단 입력(2~8) : ");
+			System.out.print("단 입력(2~8) : ");
 			dan = sc.nextInt();
 			
 			if(dan >= 2 && dan <=9) {

@@ -92,7 +92,7 @@ public class ArrayEx1 {
 		
 		// arr.length == 배열 길이
 		for(int i = 0 ; i < arr.length ; i++) {
-			 System.out.println(i + "번 인덱스 : ");
+			 System.out.print(i + "번 인덱스 : ");
 			  arr[i] = sc.nextInt(); // 입력 값을 배열에 대입
 		}
 		

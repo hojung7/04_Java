@@ -140,7 +140,7 @@ public class ArrayEx2 {
 	 */
 	public void method4() {
 	
-		char[] arr = {'정', '호', '정'};
+		char[] arr = {'홍', '길', '동'};
 		
 		for(char ch : arr) { // 향상된 for문
 			

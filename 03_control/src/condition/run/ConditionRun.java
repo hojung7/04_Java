@@ -13,10 +13,10 @@ public class ConditionRun {
 //		ex.method1();
 //		ex.method2();
 //		ex.method3();
-		
-	//	ex.displayMenu();
+//		ex.method4();
+		ex.displayMenu();
 	//	ex.method5();
-	  ex.practicce();	
+//	  ex.practicce();	
 	  
 	}
 

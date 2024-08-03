@@ -37,7 +37,7 @@ public class Parent extends Object {
 		  System.out.println("부모 - 기본 생성자로 객체 생성");
 	  }
 
-	  // 매개 변수 생성자
+	  // 매개 변수 생성자(Alt + shift + s -> o)
 	public Parent(String address, int money, String car) {
 
 		this.address = address;

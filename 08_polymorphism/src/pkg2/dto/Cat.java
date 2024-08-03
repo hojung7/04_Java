@@ -50,10 +50,10 @@ public void move() {
 
 @Override
 public void sleep() {
-	
+	System.out.println("고양이 : 엎드려 잠");
 }
 @Override
 public void eat() {
-	
+	System.out.println("고양이 : 냠냠 먹음");
 }
 }

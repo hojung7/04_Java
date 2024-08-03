@@ -40,7 +40,7 @@ public class StaticTestRun {
 			
 			// 왜 k1.nationalCode / k2.nationalCode에 노란줄이 떠있을까??
 			
-			// The static field Korean,nationalCode
+			// The static field Korean.nationalCode
 			// should be accessed in a static way
 			
 			//-> 정적 방식으로 접근하는 게 좋아~
