@@ -1,5 +1,5 @@
 package dao;
 
-public interface MemberDao {
+public class MemberDao {
 
 }
