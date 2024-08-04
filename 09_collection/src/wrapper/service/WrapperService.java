@@ -89,7 +89,7 @@ public class WrapperService {
 		int num4 = 4000;
 		Integer wrap4 = num4;  // int -> Integer
 		
-		// Integer -> long
+		// Integer -> long (Auto Unboxing + 자동 형변환)
 		
 		//(Integer) 4000 -> (int) 4000  // Auto Unboxing
 		//(int) 4000 -> (long)4000L		// 자동 형변환

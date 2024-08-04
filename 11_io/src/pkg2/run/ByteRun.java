@@ -8,9 +8,9 @@ public class ByteRun {
 	
 //		service. fileByteOutput();
 //		service.bufferedFileByteOutput();
-//		service.fileByteInput1();
+		service.fileByteInput1();
 //		service.fileByteInput2();
 //    service.bufferedFileByteInput();
-	    service.fileCopy();
+//	    service.fileCopy();
 	}
 }

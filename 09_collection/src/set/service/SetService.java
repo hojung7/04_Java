@@ -148,7 +148,7 @@ public class SetService {
 			System.out.println(snackList.get(i));
 		}
 		
-		/*향상된 for문*/
+		/*3. 향상된 for문*/
 		System.out.println("---------------------------------");
 		System.out.println("[향상된 for문]");
 		
