@@ -160,6 +160,7 @@ public class MemberView {
 		
 		System.out.printf("%-6s %-12s %6s %5s \n",
 				"[이름]", "[휴대폰 번호]", "[누적금액]", "[등급]");
+		
 		// 향상된 for문
 		for(Member member : memberList) {
 			System.out.printf("%-6s %-12s %8d %5s\n",

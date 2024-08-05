@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
 
 import dto.Todo;
 import service.TodoListService;
@@ -15,13 +16,13 @@ public class TodoListView {
 
 	private TodoListService service = null;
 	private BufferedReader br = null;
-	private DateTimeFormatter currentDateTime;
 	
+	// 기본 생성자
 	public TodoListView() {
 		try{
 	    service = new TodoListServiceImpl();
 		br = new BufferedReader(new InputStreamReader(System.in));
-		LocalDateTime currentDateTime = LocalDateTime.now();
+	
 	}catch(Exception e){
 		
 		System.out.println("***프로그램 실행 중 오류 발생***");
@@ -41,13 +42,15 @@ public class TodoListView {
 				input = selectMenu();
 				
 				switch(input) {
-				case 1: selectAll(); break;
-				case 2: selectIndex(); break;
-				case 3: addTodo(); break;
-				case 4: completTodo(); break;
+				case 1: todoListFullView(); break;
+				case 2: break;
+				case 3: break;
+				case 4:  break;
 				case 5: break;
-				case 6: deleteTodo();break;
-				case 0: System.out.println("***프로그램 종료***");break;
+				case 6: break;
+				case 0: System.out.println("***프로그램 종료***");
+				br.close();
+				break;
 				default:System.out.println("###메뉴에 작성된 번호만 입력 해주세요###");
 				
 				System.out.println("===============================");
@@ -91,69 +94,78 @@ public class TodoListView {
 	
 	//---------------------------------------------
 	//[1. Todo List Full view]
-	private void selectAll() {
+	private void todoListFullView() {
 		System.out.println("===========1. Todo List Full View============");
 		
-		// 회원 목록을 조회해 반환하는 서비스 호출
-		List<Todo> todoList = service.getTodoList();
-	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-	
-		String formattedDateTime = currentDateTime.format(formatter);
-		for(Todo todo : todoList) {
-			for(int i =0; i< todoList.size();i++) {
-			System.out.printf("[%d] %s %s",  i, formatter, todo.getTitle());
-		}
-		}
+		//할 일 목록, 완료 개수
+		Map<String, Object> map = service. todoListFullView();
 		
-	}
-	//[2. Todo Detail View]
-	private void selectIndex() throws NumberFormatException, IOException {
-		System.out.println("===========2. Todo detail View============");
-		System.out.println("인덱스 번호 입력 : ");
-		int index = Integer.parseInt(br.readLine());
-		List<Todo> todoList = service.getTodoList();
-		if(index > 0 && index < todoList.size()) {
-			Todo todo = todoList.get(index);
-			System.out.println(todo);
-		}else {
-			System.out.println("### 입력한 인덱스 번호에 할 일(Todo)가 존재하지 않습니다 ###");
-		}
-	}
-	//[3. Todo Add]
-	private void addTodo() throws IOException {
-		System.out.print("할 일 제목 입력 : ");
-		String title = br.readLine();
+		List<Todo> todoList = (List<Todo>)map.get("todoList");
+		int completeCount = (int)map.get(todoList);
 		
-		boolean result = service.addTodo(title);
-		if(result) {
-			for(int i = 0 ; i < title.length();i++) {
-			System.out.printf("\n [%s]인덱스에 추가되었습니다\n", i);
-		}
-     }
-	//[4.Todo Complete]		
-		private void completeTodo() throws NumberFormatException, IOException {
-			System.out.println("===============[4. Todo Complete]===============");
-			System.out.println("O <-> X 변경할 인덱스 번호 입력 : ");
-			int index = Integer.parseInt(br.readLine());
-			List<Todo> todoList = service.getTodoList();
-		}
-			
 		
-	//[5. ]
-	//[6.Todo Delete]
-	private void deleteTodo() {
-		System.out.println("===============[6. Todo Delete]===============");
-		System.out.println("삭제할 인덱스 번호 입력 :");
-		int index = Integer.parseInt(br.readLine());
-		List<Todo> todoList = service.getTodoList();
-		if(index>=0 && index< todoList.size() ) {
-			todoList.remove(index)
-			System.out.println("삭제 되었습니다.");
-		}else {
-			System.out.println("### 입력한 인덱스에 Todo가 존재하지 않습니다 ###");
-		}
-	}
 		
+//	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//	
+//		String formattedDateTime = currentDateTime.format(formatter);
+//		for(Todo todo : todoList) {
+//			for(int i =0; i< todoList.size();i++) {
+//			System.out.printf("[%d] %s %s",  i, formatter, todo.getTitle());
+//		}
+//		}
+//		
 	}
-	
+//	//[2. Todo Detail View]
+//	private void selectIndex() throws NumberFormatException, IOException {
+//		System.out.println("===========2. Todo detail View============");
+//		System.out.println("인덱스 번호 입력 : ");
+//		int index = Integer.parseInt(br.readLine());
+//		List<Todo> todoList = service.getTodoList();
+//		if(index > 0 && index < todoList.size()) {
+//			Todo todo = todoList.get(index);
+//			System.out.println(todo);
+//		}else {
+//			System.out.println("### 입력한 인덱스 번호에 할 일(Todo)가 존재하지 않습니다 ###");
+//		}
+//	}
+//	//[3. Todo Add]
+//	private void addTodo() throws IOException {
+//		System.out.print("할 일 제목 입력 : ");
+//		String title = br.readLine();
+//		
+//		boolean result = service.addTodo(title);
+//		if(result) {
+//			for(int i = 0 ; i < title.length();i++) {
+//			System.out.printf("\n [%s]인덱스에 추가되었습니다\n", i);
+//		}
+//     }
+//	//[4.Todo Complete]		
+//		private void completeTodo() throws NumberFormatException, IOException {
+//			System.out.println("===============[4. Todo Complete]===============");
+//			System.out.println("O <-> X 변경할 인덱스 번호 입력 : ");
+//			int index = Integer.parseInt(br.readLine());
+//			List<Todo> todoList = service.getTodoList();
+//		}
+//			
+//		
+//	//[5. ]
+//	//[6.Todo Delete]
+//	private void deleteTodo() {
+//		
+//		System.out.println("===============[4. Todo Complete]===============");		
+//		System.out.println("삭제할 인덱스 번호 입력 :");
+//		int index = Integer.parseInt(br.readLine());
+//		
+//		List<Todo> todoList = service.getTodoList();
+//		
+//		if(index>=0 && index< todoList.size() ) {
+//			todoList.remove(index)
+//			System.out.println("삭제 되었습니다.");
+//		}else {
+//			System.out.println("### 입력한 인덱스에 Todo가 존재하지 않습니다 ###");
+//		}
+//	}
+//		
+//	}
+//	
 }
